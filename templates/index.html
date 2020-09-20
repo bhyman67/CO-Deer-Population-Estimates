@@ -19,13 +19,68 @@
     <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+    <script type="text/javascript">
+
+      function set_state_county_path() {
+
+        const queryString = new URLSearchParams(new FormData(myForm)).toString()
+
+        // var queryString = ''
+        // $('input[type=checkbox]').each(function () {
+        //   if (this.checked){
+        //     queryString = queryString.concat(this.value)
+        //     queryString = queryString.concat("=true&")
+        //   }
+        // });
+        // queryString = queryString.substring(0, queryString.length-1)
+        // console.log(queryString)
+
+        var str=$('form input:not([type="checkbox"])').serialize();
+        var str1=$("form input[type='checkbox']").map(function(){return this.name+"="+this.checked;}).get().join("&");
+        if(str1!="" && str!="") str+="&"+str1;
+        else str+=str1;
+        // alert(str)
+
+        // Set the action of the form element
+        var elem = document.getElementById("myForm");
+        elem.action = elem.action.concat(str)
+
+        };
+
+    </script>
+
   </head>
 
   <body>
 
     <h1>Deer Population Estimates - CO</h1>
 
-    {{ output }}
+    <h3>Data analysis unit (DAU) list with associated <br> game management units (GMUs)</h3>
+    <form name = "myForm" id = "myForm" method = "GET", action = "/?">
+      <div>
+        {% for param in params %}
+          <input type="checkbox" id={{ param.dau }} name={{ param.dauNum }} value={{ param.dauNum }}>
+          <label for={{ param.dau }}>{{ param.dau }} {{ param.gmus }}</label>
+          <br>
+          {{ element }}
+        {% endfor %}
+      </div>
+      <div>
+        <button type="submit" onclick="set_state_county_path();">Submit</button>
+      </div>
+    </form
+
+    <!-- Graph will go here -->
+    <!-- Line chart -->
+    <div id="chart" class="chart"></div>
+    <script type="text/javascript">
+
+      var graphs = {{graphJSON | safe}};
+      Plotly.plot('chart',graphs,{});        
+
+    </script>
+
+    <img src = "static/Capture.PNG"></img>
 
     <!-- Link back to BHyman Analytics -->
     <p align="right">Back to <a href="https://bhyman67.github.io/">BHyman Analytics</a></p>
