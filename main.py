@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
 
-    df = pd.read_excel("Output Data.xlsx", index_col=0)
+    df = pd.read_csv("Output Data.csv", index_col=0)
 
     # 
     daus = []
@@ -48,7 +48,7 @@ def home():
         fig = px.line(df, x="year", y="Post Hunt Estimate", color='DAU')
         graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
 
-        
+
         return render_template("index.html", params = daus, graphJSON=graphJSON)
 
     else:
