@@ -25,16 +25,6 @@
 
         const queryString = new URLSearchParams(new FormData(myForm)).toString()
 
-        // var queryString = ''
-        // $('input[type=checkbox]').each(function () {
-        //   if (this.checked){
-        //     queryString = queryString.concat(this.value)
-        //     queryString = queryString.concat("=true&")
-        //   }
-        // });
-        // queryString = queryString.substring(0, queryString.length-1)
-        // console.log(queryString)
-
         var str=$('form input:not([type="checkbox"])').serialize();
         var str1=$("form input[type='checkbox']").map(function(){return this.name+"="+this.checked;}).get().join("&");
         if(str1!="" && str!="") str+="&"+str1;

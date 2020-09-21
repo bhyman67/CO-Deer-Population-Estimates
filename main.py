@@ -59,16 +59,3 @@ if __name__ == "__main__":
 
     app.run(debug=True)
 
-
-
-
-
-# # Helpful in figuring things out
-# #   -> https://github.com/chezou/tabula-py/issues/126
-# #   -> https://github.com/chezou/tabula-py/blob/5c22254a03862c4d8ab1cd319a090e3c464ea6df/tabula/io.py#L97
-# #   -> https://stackoverflow.com/questions/45457054/tabula-extract-tables-by-area-coordinates
-
-# # Write a Flask app where you choose a DAU and then see the population over time
-
-# # Do we try the parrelel web requests? - for now, get the app
-# running while reding data from csv
