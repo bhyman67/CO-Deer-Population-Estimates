@@ -4,7 +4,7 @@
 
 <h1></h1>
 
-<p align="center"> <big>Click <a href="https://co-deer-population-estimates.herokuapp.com/">here</a> to run the app</big> </p>
+<p align="center"> <big>Click <a href="https://co-deer-population-estimates.herokuapp.com/" target = "_blank">here</a> to run the app</big> </p>
 
 ### Description
 ...
