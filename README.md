@@ -4,7 +4,7 @@
 
 <h1></h1>
 
-<p align="center"> <big>Click <a href="https://co-deer-population-estimates.herokuapp.com/" target = "_blank">here</a> to run this app</big> </p>
+<p align="center"> <big>Click <a href="https://co-deer-population-estimates.herokuapp.com/">here</a> to run the app</big> </p>
 
 ### Description
 ...
@@ -15,8 +15,7 @@
 
 ### Code
 
-The code for this project is in [here](https://github.com/bhyman67/CO-Deer-Population-Estimates).
-
 ...
 
-<p align="right">Back to <a href="https://bhyman67.github.io/">BHyman Analytics<a><p>
+<p align="right">Click <a href="https://github.com/bhyman67/CO-Deer-Population-Estimates">here</a> to view this project's repository<p>
+<p align="right">Go back to <a href="https://bhyman67.github.io/">BHyman Analytics</a><p>
