@@ -18,4 +18,3 @@
 ...
 
 <p align="right">Click <a href="https://github.com/bhyman67/CO-Deer-Population-Estimates">here</a> to view this project's repository<p>
-<p align="right">Go back to <a href="https://bhyman67.github.io/">BHyman Analytics</a><p>
