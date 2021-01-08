@@ -45,6 +45,16 @@
 
     <h1>Deer Population Estimates - CO</h1>
 
+    <!-- Graph will go here -->
+    <!-- Line chart -->
+    <div id="chart" class="chart"></div>
+    <script type="text/javascript">
+
+      var graphs = {{graphJSON | safe}};
+      Plotly.plot('chart',graphs,{});        
+
+    </script>
+
     <h3>Data analysis unit (DAU) list with associated <br> game management units (GMUs)</h3>
     <form name = "myForm" id = "myForm" method = "GET", action = "/?">
       <div>
@@ -58,17 +68,7 @@
       <div>
         <button type="submit" onclick="set_state_county_path();">Submit</button>
       </div>
-    </form
-
-    <!-- Graph will go here -->
-    <!-- Line chart -->
-    <div id="chart" class="chart"></div>
-    <script type="text/javascript">
-
-      var graphs = {{graphJSON | safe}};
-      Plotly.plot('chart',graphs,{});        
-
-    </script>
+    </form>
 
     <img src = "static/Capture.PNG"></img>
 
